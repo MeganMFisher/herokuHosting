@@ -1,4 +1,4 @@
-# herokuHosting
+# Heroku Hosting Tutorial
 
 Your database needs to be hosted on ElephantSQL before starting this tutorial. 
 
