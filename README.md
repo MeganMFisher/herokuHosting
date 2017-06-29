@@ -51,17 +51,20 @@ Your database needs to be hosted on ElephantSQL before starting this tutorial.
 
 1. Type git remote -v into your command line. You should see your github remotes.
 	
-Example: origin  https://github.com/MeganMFisher/loginDemo.git (fetch)
-        origin  https://github.com/MeganMFisher/loginDemo.git (push)
+Example: 
+origin  https://github.com/yourGithub/yourRespositoryName.git (fetch)
+origin  https://github.com/yourGithub/yourRespositoryName.git (push)
 
 2. Now type heroku git:remote -a <yourAppName> to set a new remote to heroku. (this app name is referring to the app you made on heroku) This will allow you to use git commands to push your code to your Heroku server.
 
-	If you type git remote -v you will now see the both heroku and github remotes.
+    If you type git remote -v you will now see the both heroku and github remotes.
 	
-	Example: heroku  https://git.heroku.com/hostingexamplelogin.git (fetch)
-            heroku  https://git.heroku.com/hostingexamplelogin.git (push)
-            origin  https://github.com/MeganMFisher/loginDemo.git (fetch)
-            origin  https://github.com/MeganMFisher/loginDemo.git (push)
+Example: 
+    
+    heroku  https://git.heroku.com/herokuAppName.git (fetch)
+    heroku  https://git.heroku.com/herokuAppName.git (push)
+    origin  https://github.com/yourGithub/yourRespositoryName.git (fetch)
+    origin  https://github.com/yourGithub/yourRespositoryName.git (push)
 
 
 
@@ -74,28 +77,32 @@ If there are any references to localhost, these will need to be changed to your 
 All DB strings, api keys, client secrets etc... should be put in your 'config vars' on your Heroku Dashboard as stated in one of the above sections.
 To reference any of your 'config vars' inside of your app, simply use process.env.YourKeyName. Here's an example.
 
-massive(process.env.database).then ((db) => {
- 	app.set('db', db);
-});
+Example: 
 
- app.listen(process.env.PORT || 3000, function() {
-    console.log('listening on port', this.address().port);
-  });
+        massive(process.env.database).then ((db) => {
+ 	            app.set('db', db);
+        });
+
+        app.listen(process.env.PORT || 3000, function() {
+                console.log('listening on port', this.address().port);
+        });
 
 *Don't forget to replace your port with process.env.PORT. Capital letters are important here.
 *Notice the use of the "or" ||. Using it allows you to specify both environmental variables as well as local variables. In this example the port will be specified by heroku when hosted, but default to 3000 when you're running locally.
 
 
-**You will need to comment out your config.js file or remove it from your app all together. So anything in your config.js file should be entered in as a config variable on your heroku website**
+**You will need to comment out your config.js file or remove it from your app all together. So anything in your config.js file should be entered in as a config variable on your heroku website
 
 
 
 ## Make your ENV variables work on local development: 
-**IF YOU DON’T HAVE API KEYS SKIP THIS STEP**
+**IF YOU DON’T HAVE API KEYS SKIP THIS STEP
 
 1. You can also set up your local development environment to provide your environmental variables like so.
 
-Example: apiKey=j83kgl9s8b node server.js
+Example: 
+
+    apiKey=j83kgl9s8b node server.js
 
 
 
