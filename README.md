@@ -2,11 +2,11 @@
 
 Your database needs to be hosted on ElephantSQL before starting this tutorial. 
 
-##Create Heroku Account 
+## Create Heroku Account 
 
 1. Create a heroku account https://signup.heroku.com/dc
 
-##Download Heroku CLI and set Heroku git remote
+## Download Heroku CLI and set Heroku git remote
 
 1. Download Heroku CLI from heroku's website https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up 
 
@@ -15,7 +15,7 @@ Your database needs to be hosted on ElephantSQL before starting this tutorial.
 **You only need to download the CLI and check your versions from the link about do not worry about Heroku Login quite yet. 
 
 
-##Login into Heroku and create a new app. 
+## Login into Heroku and create a new app. 
 
 1. Click the “New” purple button on the right and select ‘Create new app’
 2. Enter a valid name (This name will be what your URL includes so choose a name that you don’t mind having as part of the URL. Be sure to remember the name for when we setup the git remotes)
@@ -23,7 +23,7 @@ Your database needs to be hosted on ElephantSQL before starting this tutorial.
 
 
 
-##Add Node.js BuildPack
+## Add Node.js BuildPack
 
 1. Once your app has been created it will take you to the Deploy page. Navigate to the Settings tap.
 2. Scroll down to the ‘Add build buildpack’ button on the right. Click it and then select ‘nodes’ from the examples and save your changes. 
@@ -31,7 +31,7 @@ Your database needs to be hosted on ElephantSQL before starting this tutorial.
 	
 
 
-##Add your config variables to your Heroku Settings
+## Add your config variables to your Heroku Settings
 
 1. Still on your settings page, scroll up to the config variables section and click ‘Reveal Config Vars’
 2. Enter into the first Key input the word ‘connectionString’ then in the Value input enter in the url string you received from Elephantsql when you hosted your database. 
@@ -39,7 +39,7 @@ Your database needs to be hosted on ElephantSQL before starting this tutorial.
 
 
 
-##Login to heroku in your terminal
+## Login to heroku in your terminal
 
 1. In your terminal enter heroku login. 
 2. It will ask you for your heroku credentials. Enter in your email and hit enter. Then enter in your password which will not show up as you type it will be hidden just FYI. (Both 	will be whatever email and password you created your heroku account with.)
@@ -47,7 +47,7 @@ Your database needs to be hosted on ElephantSQL before starting this tutorial.
 
 
 
-##Check GitHub remote and setup heroku remote
+## Check GitHub remote and setup heroku remote
 
 1. Type git remote -v into your command line. You should see your github remotes.
 	
@@ -66,7 +66,7 @@ Example: origin  https://github.com/MeganMFisher/loginDemo.git (fetch)
 
 
 
-##Configure your app
+## Configure your app
 
 In your app you will want to make the following changes:
 
@@ -90,7 +90,7 @@ massive(process.env.database).then ((db) => {
 
 
 
-##Make your ENV variables work on local development: 
+## Make your ENV variables work on local development: 
 **IF YOU DON’T HAVE API KEYS SKIP THIS STEP**
 
 1. You can also set up your local development environment to provide your environmental variables like so.
@@ -100,7 +100,7 @@ Example: apiKey=j83kgl9s8b node server.js
 
 
 
-##Set up your package.json
+## Set up your package.json
 
 If you haven’t already set your main to the file path to your server file. ./server.js or ./server/server.js if your file is in a subdirectory.
 
@@ -116,7 +116,7 @@ If you don't have a start script, make one. Set your start script to node index.
 Check that all your dependencies are listed. Heroku will not install anything that is not listed in your dependencies.
 
 
-##Setup your Procfile
+## Setup your Procfile
 
 Add a file on your app's root directory called Procfile. 
 Inside of your procfile enter in the following code, replacing server.js with the name of your server file. web: node server.js 
@@ -128,7 +128,7 @@ Example: web: node server.js  OR  node server/server.js
 
 
 
-##Auth0
+## Auth0
 
 Set your Auth0 console to correct redirect uri.
 
@@ -144,7 +144,7 @@ Add your Heroku url to your whitelist on https://auth0.com/
 
 
 
-##Launch
+## Launch
 
 You can test your app locally by running your start script, passing in your ENV variables like so. (Note that you need to be in your app directory)
 
@@ -167,6 +167,6 @@ Either your logs will report "state changed from starting to up" or "state chang
 
 Any time you make changes to your code you will need to add, commit, and push your changes to heroku master in order for them to update. 
 
-##ADDITIONAL RESOURCES: https://devcenter.heroku.com/categories/nodejs
+## ADDITIONAL RESOURCES: https://devcenter.heroku.com/categories/nodejs
 https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
 
