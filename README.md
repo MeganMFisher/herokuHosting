@@ -52,8 +52,9 @@ Your database needs to be hosted on ElephantSQL before starting this tutorial.
 1. Type git remote -v into your command line. You should see your github remotes.
 	
 Example: 
-origin  https://github.com/yourGithub/yourRespositoryName.git (fetch)
-origin  https://github.com/yourGithub/yourRespositoryName.git (push)
+
+    origin  https://github.com/yourGithub/yourRespositoryName.git (fetch)
+    origin  https://github.com/yourGithub/yourRespositoryName.git (push)
 
 2. Now type heroku git:remote -a <yourAppName> to set a new remote to heroku. (this app name is referring to the app you made on heroku) This will allow you to use git commands to push your code to your Heroku server.
 
@@ -160,13 +161,13 @@ You can test your app locally by running your start script, passing in your ENV 
 If you are confident that your app is running ok at this point then we are ready to push the app to heroku.
 
 Type into your terminal:
-git add .
-git commit -m "message"
-git push heroku master
+    1. **git add .**
+    2. **git commit -m "message"**
+    3. **git push heroku master**
 
 After it is finished building you can check to see the status of your app by typing:
 
-heroku logs --tail
+**heroku logs --tail**
 
 Either your logs will report "state changed from starting to up" or "state changed from starting to crashed". If the app crashed, you will have to debug. Otherwise you are good to go! Find your url on the settings tab of your heroku dashboard online.
 
