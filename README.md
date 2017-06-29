@@ -140,7 +140,9 @@ Example: web: node server.js  OR  node server/server.js
 
 Set your Auth0 console to correct redirect uri.
 
-Example: 	passport.use(new Auth0Strategy({
+Example: 	
+
+            passport.use(new Auth0Strategy({
             domain: process.env.domain,
             clientID: process.env.clientID,
             clientSecret: process.env.clientSecret,
