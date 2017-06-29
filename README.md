@@ -49,16 +49,16 @@ Your database needs to be hosted on ElephantSQL before starting this tutorial.
 
 ## Check GitHub remote and setup heroku remote
 
-1. Type git remote -v into your command line. You should see your github remotes.
+1. Type **git remote -v** into your command line. You should see your github remotes.
 	
 Example: 
 
     origin  https://github.com/yourGithub/yourRespositoryName.git (fetch)
     origin  https://github.com/yourGithub/yourRespositoryName.git (push)
 
-2. Now type heroku git:remote -a <yourAppName> to set a new remote to heroku. (this app name is referring to the app you made on heroku) This will allow you to use git commands to push your code to your Heroku server.
+2. Now type **heroku git:remote -a yourAppName** to set a new remote to heroku. (this app name is referring to the app you made on heroku) This will allow you to use git commands to push your code to your Heroku server.
 
-    If you type git remote -v you will now see the both heroku and github remotes.
+    If you type **git remote -v** you will now see the both heroku and github remotes.
 	
 Example: 
     
@@ -131,7 +131,9 @@ Inside of your procfile enter in the following code, replacing server.js with th
 
 If your server file is in a subdirectory of the root, place the Procfile at the root and reference the path to your server file like so web: node server/server.js
 
-Example: web: node server.js  OR  node server/server.js
+Example: 
+
+    web: node server.js  OR  node server/server.js
 
 
 
@@ -150,7 +152,6 @@ Example:
 
 
 Add your Heroku url to your whitelist on https://auth0.com/ 
-
 
 
 
