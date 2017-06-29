@@ -156,18 +156,23 @@ Add your Heroku url to your whitelist on https://auth0.com/
 
 You can test your app locally by running your start script, passing in your ENV variables like so. (Note that you need to be in your app directory)
 
-	Example: connectionString=‘elephantSQLconnectionString’ node server.js
+Example: 
+    
+    connectionString=‘elephantSQLconnectionString’ node server.js
 
-If you are confident that your app is running ok at this point then we are ready to push the app to heroku.
+If you are confident that your app is running ok at this point then we are ready to push the app to heroku. Add, commit, and push your app to Heroku. 
 
-Type into your terminal:
-    1. **git add .**
-    2. **git commit -m "message"**
-    3. **git push heroku master**
+Example: 
 
-After it is finished building you can check to see the status of your app by typing:
+    git add .
+    git commit -m "message"
+    git push heroku master
 
-**heroku logs --tail**
+After it is finished building you can check to see the status of your app by typing in heroku logs --tail. 
+
+Example: 
+
+    heroku logs --tail
 
 Either your logs will report "state changed from starting to up" or "state changed from starting to crashed". If the app crashed, you will have to debug. Otherwise you are good to go! Find your url on the settings tab of your heroku dashboard online.
 
@@ -175,6 +180,7 @@ Either your logs will report "state changed from starting to up" or "state chang
 
 Any time you make changes to your code you will need to add, commit, and push your changes to heroku master in order for them to update. 
 
-## ADDITIONAL RESOURCES: https://devcenter.heroku.com/categories/nodejs
+## ADDITIONAL RESOURCES: 
+https://devcenter.heroku.com/categories/nodejs
 https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
 
