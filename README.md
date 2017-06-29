@@ -43,7 +43,7 @@ Your database needs to be hosted on ElephantSQL before starting this tutorial.
 
 1. In your terminal enter heroku login. 
 2. It will ask you for your heroku credentials. Enter in your email and hit enter. Then enter in your password which will not show up as you type it will be hidden just FYI. (Both 	will be whatever email and password you created your heroku account with.)
-3. Once your login is successful it will display “Logged in as <your email>”
+3. Once your login is successful it will display “Logged in as 'yourEmailAddress'”
 
 
 
@@ -133,7 +133,7 @@ If your server file is in a subdirectory of the root, place the Procfile at the 
 
 Example: 
 
-    web: node server.js  OR  node server/server.js
+    web: node server.js  OR  web: node server/server.js
 
 
 
