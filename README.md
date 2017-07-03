@@ -80,7 +80,7 @@ To reference any of your 'config vars' inside of your app, simply use process.en
 
 Example: 
 
-        massive(process.env.database).then ((db) => {
+        massive(process.env.connectionString).then ((db) => {
  	            app.set('db', db);
         });
 
