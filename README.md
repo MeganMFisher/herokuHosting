@@ -26,7 +26,7 @@ Your database needs to be hosted on ElephantSQL before starting this tutorial.
 ## Add Node.js BuildPack
 
 1. Once your app has been created it will take you to the Deploy page. Navigate to the Settings tap.
-2. Scroll down to the ‘Add build buildpack’ button on the right. Click it and then select ‘nodes’ from the examples and save your changes. 
+2. Scroll down to the ‘Add build buildpack’ button on the right. Click it and then select ‘nodejs’ from the examples and save your changes. 
 3. A yellow box that says ‘Your new buildpack configuration will be used when this app is next deployed.’ Will appear to let you know it has been added and will set up once we 	deploy the application.  
 	
 
