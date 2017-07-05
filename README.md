@@ -151,8 +151,11 @@ Example:
             callbackURL: '/auth/callback'
 
 
-Add your Heroku url to your allowed callback URLs on https://auth0.com/ 
+Add your Heroku url to your allowed callback URLs on https://auth0.com/. You can find your heroku URL on the settings page near the bottom where is says 'Domain'. You don't want your heroku git url.
 
+Example: 
+
+        http://websiteName.herokuapp.com/auth/callback
 
 
 ## Launch
