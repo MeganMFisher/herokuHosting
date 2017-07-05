@@ -151,7 +151,7 @@ Example:
             callbackURL: '/auth/callback'
 
 
-Add your Heroku url to your whitelist on https://auth0.com/ 
+Add your Heroku url to your allowed callback URLs on https://auth0.com/ 
 
 
 
